@@ -1,1 +1,0 @@
-# gvsig-desktop-scripting-RingMap

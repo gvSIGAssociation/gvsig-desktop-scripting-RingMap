@@ -1,0 +1,21 @@
+#
+#Wed Sep 26 18:39:45 CEST 2018
+owner=
+code=RingMap
+java-version=j1_7
+official=false
+type=Script
+version=1.0.0-0
+state=testing
+operating-system=all
+dependencies=
+sources-url=
+web-url=
+architecture=all
+model-version=1.0.1
+categories=
+description=
+owner-url=
+buildNumber=0
+gvSIG-version=2.4.0
+name=RingMap
