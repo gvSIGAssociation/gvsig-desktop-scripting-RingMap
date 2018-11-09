@@ -14,6 +14,7 @@ from addons.RingMap.ringCreation import createRingMap
 from org.gvsig.andami import PluginsLocator
 import os
 from java.io import File
+from org.gvsig.tools import ToolsLocator
 
 class RingMapGeoprocess(ToolboxProcess):
   def getHelpFile(self):
@@ -38,26 +39,27 @@ class RingMapGeoprocess(ToolboxProcess):
         return File(helpPath)
     return None
   def defineCharacteristics(self):
-      self.setName("_Ring_map")
-      self.setGroup("_Criminology_group")
+      i18nManager = ToolsLocator.getI18nManager()
+      self.setName(i18nManager.getTranslation("_Ring_map"))
+      self.setGroup(i18nManager.getTranslation("_Criminology_group"))
       self.setUserCanDefineAnalysisExtent(False)
       params = self.getParameters()
       
-      params.addInputVectorLayer("LAYER","_Input_layer", SHAPE_TYPE_POLYGON, True)
-      params.addTableField("FLAYER", "_Field_table", "LAYER", True)
-      params.addInputTable("TABLE", "_Table_data", True)
-      params.addTableField("FTABLE", "_Field_table", "TABLE", True)
-      params.addString("FIELDS", "_Fields_separated_by_comma")
+      params.addInputVectorLayer("LAYER",i18nManager.getTranslation("_Input_layer"), SHAPE_TYPE_POLYGON, True)
+      params.addTableField("FLAYER", i18nManager.getTranslation("_Field_table"), "LAYER", True)
+      params.addInputTable("TABLE", i18nManager.getTranslation("_Table_data"), True)
+      params.addTableField("FTABLE", i18nManager.getTranslation("_Field_table"), "TABLE", True)
+      params.addString("FIELDS", i18nManager.getTranslation("_Fields_separated_by_comma"))
       
-      params.addNumericalValue("DEFAULTSEGS", "_Number_of_segments",10, NUMERICAL_VALUE_INTEGER)
-      params.addNumericalValue("GAPS", "_Gaps_between_sectors",0, NUMERICAL_VALUE_INTEGER)
-      params.addNumericalValue("HALFSTEP", "_Half_step",90, NUMERICAL_VALUE_DOUBLE)
-      params.addNumericalValue("INTERNALRADIUS", "_Internal_radius",0, NUMERICAL_VALUE_DOUBLE)
-      params.addNumericalValue("RADIUSINTERVAL", "_Radius_interval",0, NUMERICAL_VALUE_DOUBLE)
-      params.addBoolean("CENTERTOPSECTOR", "_Center_top_sector",True)
-      params.addBoolean("LABELIDSECTOR", "_Label_id_sector",True)
-      params.addBoolean("LABELONLYFIRSTSECTOR", "_Label_only_first_sector",True)
-      params.addBoolean("CREATESECTORLABEL", "_Create_Sector_Label",True)
+      params.addNumericalValue("DEFAULTSEGS", i18nManager.getTranslation("_Number_of_segments"),10, NUMERICAL_VALUE_INTEGER)
+      params.addNumericalValue("GAPS", i18nManager.getTranslation("_Gaps_between_sectors"),0, NUMERICAL_VALUE_INTEGER)
+      params.addNumericalValue("HALFSTEP", i18nManager.getTranslation("_Half_step"),90, NUMERICAL_VALUE_DOUBLE)
+      params.addNumericalValue("INTERNALRADIUS", i18nManager.getTranslation("_Internal_radius"),0, NUMERICAL_VALUE_DOUBLE)
+      params.addNumericalValue("RADIUSINTERVAL", i18nManager.getTranslation("_Radius_interval"),0, NUMERICAL_VALUE_DOUBLE)
+      params.addBoolean("CENTERTOPSECTOR", i18nManager.getTranslation("_Center_top_sector"),True)
+      params.addBoolean("LABELIDSECTOR", i18nManager.getTranslation("_Label_id_sector"),True)
+      params.addBoolean("LABELONLYFIRSTSECTOR", i18nManager.getTranslation("_Label_only_first_sector"),True)
+      params.addBoolean("CREATESECTORLABEL", i18nManager.getTranslation("_Create_Sector_Label"),True)
 
   def processAlgorithm(self):
     features=None
