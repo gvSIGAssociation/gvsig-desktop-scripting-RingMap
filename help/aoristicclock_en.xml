@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='ISO-8859-1' standalone='yes' ?>
+<!--
+
+    gvSIG. Desktop Geographic Information System.
+
+    Copyright (C) 2007-2012 gvSIG Association.
+
+    This program is free software; you can redistribute it and/or
+    modify it under the terms of the GNU General Public License
+    as published by the Free Software Foundation; either version 2
+    of the License, or (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program; if not, write to the Free Software
+    Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+    MA  02110-1301, USA.
+
+    For any additional information, do not hesitate to contact us
+    at info AT gvsig.com, or visit our website www.gvsig.com.
+
+-->
+	<help>
+		<element name="DESCRIPTION" text="Geoprocess to transform a Integer field with dates in format yyyymmdd into a Date field. Default values of the layer, for example '99999999' could be change for a date introduced with the previous format. For example: '19991231'." description="Description" type="0">
+		</element>
+		<element name="ADDITIONAL_INFO" text="" description="Additional Info" type="0">
+		</element>
+		<element name="EXTENSION_AUTHOR" text="Oscar Martinez" description="Algorithm created by" type="0">
+		</element>
+		<element name="HELP_AUTHOR" text="Oscar Martinez" description="Help created by" type="0">
+		</element>
+		<element name="USER_NOTES" text="" description="User notes" type="0">
+		</element>
+		<element name="LAYER" text="" description="Input layer" type="3">
+		</element>
+		<element name="CHECK" text="" description="Selected geometries" type="3">
+		</element>
+		<element name="OUTPUT_DESCRIPTION" text="" description="Description" type="2">
+		</element>
+		<element name="RESULT" text="" description="Date Result" type="2">
+		</element>
+	</help>
+<?xml version='1.0' encoding='ISO-8859-1' standalone='yes' ?>

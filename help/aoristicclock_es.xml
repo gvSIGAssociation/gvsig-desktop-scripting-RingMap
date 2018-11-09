@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='ISO-8859-1' standalone='yes' ?>
+<!--
+
+    gvSIG. Desktop Geographic Information System.
+
+    Copyright (C) 2007-2012 gvSIG Association.
+
+    This program is free software; you can redistribute it and/or
+    modify it under the terms of the GNU General Public License
+    as published by the Free Software Foundation; either version 2
+    of the License, or (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program; if not, write to the Free Software
+    Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+    MA  02110-1301, USA.
+
+    For any additional information, do not hesitate to contact us
+    at info AT gvsig.com, or visit our website www.gvsig.com.
+
+-->
+	<help>
+		<element name="DESCRIPTION" text="Geoproceso para la transformacion de campos tipo Integer con fechas en forma yyyymmdd para su transformacion a un campo nuevo de tipo Date. Valores default como por ejemplo '99999999' puedes reemplazarse por una fecha introducida en el formato anterior. Por ejemplo: '19991231'" description="Descripcion" type="0">
+		</element>
+		<element name="ADDITIONAL_INFO" text="" description="Informacion adicional" type="0">
+		</element>
+		<element name="EXTENSION_AUTHOR" text="Oscar Martinez" description="Algoritmo creado por" type="0">
+		</element>
+		<element name="HELP_AUTHOR" text="Oscar Martinez" description="Ayuda creada por" type="0">
+		</element>
+		<element name="USER_NOTES" text="" description="Notas de usuario" type="0">
+		</element>
+		<element name="LAYER" text="" description="Capa de entrada" type="3">
+		</element>
+		<element name="CHECK" text="" description="Geometrias seleccionadas" type="3">
+		</element>
+		<element name="OUTPUT_DESCRIPTION" text="" description="Descripcion" type="2">
+		</element>
+		<element name="RESULT" text="" description="Date Result" type="2">
+		</element>
+	</help>
+<?xml version='1.0' encoding='ISO-8859-1' standalone='yes' ?>

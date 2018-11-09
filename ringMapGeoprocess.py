@@ -11,9 +11,32 @@ from es.unex.sextante.gui.core import NameAndIcon
 from es.unex.sextante.gui.core import SextanteGUI
 from org.gvsig.geoprocess.lib.api import GeoProcessLocator
 from addons.RingMap.ringCreation import createRingMap
+from org.gvsig.andami import PluginsLocator
+import os
+from java.io import File
 
 class RingMapGeoprocess(ToolboxProcess):
+  def getHelpFile(self):
+    name = "ringmap"
+    extension = ".xml"
+    locale = PluginsLocator.getLocaleManager().getCurrentLocale()
+    tag = locale.getLanguage()
+    #extension = ".properties"
 
+    helpPath = gvsig.getResource(__file__, "help", name + "_" + tag + extension)
+    if os.path.exists(helpPath):
+        return File(helpPath)
+    #Alternatives
+    alternatives = PluginsLocator.getLocaleManager().getLocaleAlternatives(locale)
+    for alt in alternatives:
+        helpPath = gvsig.getResource(__file__, "help", name + "_" + alt.toLanguageTag() + extension )
+        if os.path.exists(helpPath):
+            return File(helpPath)
+    # More Alternatives
+    helpPath = gvsig.getResource(__file__, "help", name + extension)
+    if os.path.exists(helpPath):
+        return File(helpPath)
+    return None
   def defineCharacteristics(self):
       self.setName("_Ring_map")
       self.setGroup("_Criminology_group")
