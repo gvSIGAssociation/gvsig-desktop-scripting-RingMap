@@ -111,7 +111,7 @@ def createRingMap(
         radiusInterval,
         centerTopSector,
         labelOnlyFirstSector,
-        iLabel,
+        labelIdSector,
         createSectorLabel):
   # Pre vars
   ring_num = len(fields) # number fileds
@@ -229,7 +229,8 @@ def createRingMap(
         newFeatureLine = lineShape.getFeatureStore().createNewFeature(featureIdValues)
         newFeatureLine.set("GEOMETRY", line)
         lineShape.getFeatureStore().insert(newFeatureLine)
-      if iLabel==True:
+        
+      if labelIdSector==True:
         pointLocation = getRingCentroid(ring,centroid, rout,radius_interval, from_deg, to_deg, 2)
         newFeaturePoint = pointStore.createNewFeature()
         newFeaturePoint.set("LABEL", fields[iring])
@@ -241,7 +242,7 @@ def createRingMap(
         newFeaturePoint.set("GEOMETRY", pointLocation)
         pointStore.insert(newFeaturePoint)
         
-    if iLabel==True and createSectorLabel==True:
+    if createSectorLabel==True:# iLabel==True and 
         pointLocation = getRingCentroid(ring,centroid, rout+radius_interval,radius_interval, from_deg, to_deg, 5)
         newFeaturePoint = pointStore.createNewFeature()
         newFeaturePoint.set("LABEL", feature.get(idTable))
@@ -254,7 +255,7 @@ def createRingMap(
         pointStore.insert(newFeaturePoint)
         
     if labelOnlyFirstSector:
-      iLabel = False
+      labelIdSector = False
     idx_side +=1
     
     
@@ -294,6 +295,7 @@ def createRingMap(
   pointSymbol = manager.createSymbol(POINT)
   pointSymbol.setColor(Color.black)
   leg.setDefaultSymbol(pointSymbol)
+  pointSymbol.setSize(0)
   pointShape.setLegend(leg)
 
   ds = LabelingFactory().createDefaultStrategy(pointShape)

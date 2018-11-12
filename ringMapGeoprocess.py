@@ -1,4 +1,7 @@
 # encoding: utf-8
+from gvsig.uselib import use_plugin
+use_plugin("org.gvsig.toolbox")
+use_plugin("org.gvsig.geoprocess.app.mainplugin")
 
 import gvsig
 import pdb
@@ -46,8 +49,8 @@ class RingMapGeoprocess(ToolboxProcess):
       params = self.getParameters()
       
       params.addInputVectorLayer("LAYER",i18nManager.getTranslation("_Input_layer"), SHAPE_TYPE_POLYGON, True)
-      params.addTableField("FLAYER", i18nManager.getTranslation("_Field_table"), "LAYER", True)
-      params.addInputTable("TABLE", i18nManager.getTranslation("_Table_data"), True)
+      params.addTableField("FLAYER", i18nManager.getTranslation("_Field_layer"), "LAYER", True)
+      params.addInputTable("TABLE", i18nManager.getTranslation("_Input_Table"), True)
       params.addTableField("FTABLE", i18nManager.getTranslation("_Field_table"), "TABLE", True)
       params.addString("FIELDS", i18nManager.getTranslation("_Fields_separated_by_comma"))
       
