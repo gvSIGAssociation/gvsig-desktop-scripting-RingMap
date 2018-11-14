@@ -25,23 +25,49 @@
 
 -->
 	<help>
-		<element name="DESCRIPTION" text="Geoprocess to transform a Integer field with dates in format yyyymmdd into a Date field. Default values of the layer, for example '99999999' could be change for a date introduced with the previous format. For example: '19991231'." description="Description" type="0">
+		<element name="DESCRIPTION" text="Geoproceso para la creacion de una grafica que ayuda a visualizar diferentes campos contenidos en una misma entidad y ser facil de comparar con las geometrias cercanas. Esta entidad puede ser de cualquier tipo: poligono, linea o punto. El proceso se ejecuta sobre toda o sobre la seleccion de una capa." description="Descripcion" type="0">
 		</element>
-		<element name="ADDITIONAL_INFO" text="" description="Additional Info" type="0">
+                <image description="Parametros de la capa ejemplo" file="params.png">
+		</image>
+                <image description="Opciones de la capa ejemplo" file="options.png">
+		</image>
+                <image description="Resultado" file="result1.png">
+		</image>
+		<element name="ADDITIONAL_INFO" text="" description="Informacion adicional" type="0">
 		</element>
-		<element name="EXTENSION_AUTHOR" text="Oscar Martinez" description="Algorithm created by" type="0">
+		<element name="EXTENSION_AUTHOR" text="Oscar Martinez" description="Algoritmo creado por" type="0">
 		</element>
-		<element name="HELP_AUTHOR" text="Oscar Martinez" description="Help created by" type="0">
+		<element name="HELP_AUTHOR" text="Oscar Martinez" description="Ayuda creada por" type="0">
 		</element>
-		<element name="USER_NOTES" text="" description="User notes" type="0">
+		<element name="USER_NOTES" text="" description="Notas de usuario" type="0">
 		</element>
-		<element name="LAYER" text="" description="Input layer" type="3">
+		<element name="LAYER" text="Capa de entrada" description="" type="3">
 		</element>
-		<element name="CHECK" text="" description="Selected geometries" type="3">
+		<element name="FLAYER" text="Campo unico de la capa de entrada" description="" type="3">
 		</element>
-		<element name="OUTPUT_DESCRIPTION" text="" description="Description" type="2">
+		<element name="TABLE" text="Tabla de entrada con los campos a usas" description="" type="3">
 		</element>
-		<element name="RESULT" text="" description="Date Result" type="2">
+		<element name="FTABLE" text="Campo unico de la tabla de entrada" description="" type="3">
+		</element>
+		<element name="FIELDS" text="Campos a utilizar" description="" type="3">
+		</element>
+		<element name="DEFAULTSEGS" text="Numero de segementos que tendra la curva del poligono" description="" type="3">
+		</element>
+		<element name="GAPS" text="Espacios en blanco entre sectores" description="" type="3">
+		</element>
+		<element name="HALFSTEP" text="Giro inicial de la grafica" description="" type="3">
+		</element>
+		<element name="INTERNALRADIUS" text="Radio del circulo interno que se queda vacio" description="" type="3">
+		</element>
+		<element name="RADIUSINTERVAL" text="Intervalo de radio entre los diferentes circulos" description="" type="3">
+		</element>
+		<element name="CENTERTOPSECTOR" text="Centrar el sector superior para que el eje X lo corte por la mitad" description="" type="3">
+		</element>
+		<element name="LABELIDSECTOR" text="Etiquetar la ID de cada elemento analizado" description="" type="3">
+		</element>
+		<element name="LABELONLYFIRSTSECTOR" text="Etiquetar solo los campos del el primer sector" description="" type="3">
+		</element>
+		<element name="CREATESECTORLABEL" text="Crear etiqueta del sector" description="" type="3">
 		</element>
 	</help>
 <?xml version='1.0' encoding='ISO-8859-1' standalone='yes' ?>
