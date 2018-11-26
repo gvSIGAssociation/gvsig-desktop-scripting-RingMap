@@ -268,10 +268,10 @@ def createRingMap(
 
   try:
     vil = VectorialIntervalLegend(POLYGON)
-    vil.setStartColor(Color.red)
-    vil.setEndColor(Color.blue)
+    vil.setStartColor(Color.white)
+    vil.setEndColor(Color.red)
     vil.setIntervalType(1)
-    ii = vil.calculateIntervals(ringShape.getFeatureStore(), "VALUE", 5, POLYGON)
+    ii = vil.calculateIntervals(ringShape.getFeatureStore(), "VALUE", 8, POLYGON)
     
     vil.setIntervals(ii)
     vil.setClassifyingFieldTypes([7])
