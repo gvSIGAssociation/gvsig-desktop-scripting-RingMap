@@ -27,9 +27,9 @@
 	<help>
 		<element name="DESCRIPTION" text="Geoprocess for the creation of a graph that helps to visualize different fields contained in the same entity and be easy to compare with nearby geometries. This entity can be of any type: polygon, line or point. The process is executed on all or on the selection of a layer. There is needed an ID field." description="Description" type="0">
 		</element>
-                <image description="Example for layer parameters" file="params.png">
+                <image description="Example for layer parameters" file="params_en.png">
 		</image>
-                <image description="Example for options parameters" file="options.png">
+                <image description="Example for options parameters" file="options_en.png">
 		</image>
                 <image description="Result" file="result1.png">
 		</image>
