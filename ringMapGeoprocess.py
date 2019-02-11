@@ -44,7 +44,7 @@ class RingMapGeoprocess(ToolboxProcess):
   def defineCharacteristics(self):
       i18nManager = ToolsLocator.getI18nManager()
       self.setName(i18nManager.getTranslation("_Ring_map"))
-      self.setGroup(i18nManager.getTranslation("_Criminology_group"))
+      self.setGroup(i18nManager.getTranslation("_Data_Analysis"))
       self.setUserCanDefineAnalysisExtent(False)
       params = self.getParameters()
       
