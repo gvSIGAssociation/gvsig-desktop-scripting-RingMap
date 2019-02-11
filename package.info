@@ -1,11 +1,11 @@
 #
-#Thu Jan 24 13:19:43 CET 2019
+#Mon Feb 11 18:12:16 CET 2019
 owner=gvSIG Association
 code=RingMap
 java-version=j1_7
 official=true
 type=Script
-version=1.0.0-1
+version=1.0.0-2
 state=testing
 operating-system=all
 dependencies=
@@ -16,7 +16,6 @@ model-version=1.0.1
 categories=Geoprocess
 description=Create ring map over some entities for easy visualization
 owner-url=
-buildNumber=1
-download-url=https\://github.com/gvSIGAssociation/gvsig-desktop-scripting-RingMap/releases/download/1.0.0-1/gvSIG-desktop-2.5.0-RingMap-1.0.0-1-testing-all-all-j1_7.gvspkg
+buildNumber=2
 gvSIG-version=2.5.0
 name=Geoprocess\: Ring Map
