@@ -10,7 +10,7 @@ from gvsig import commonsdialog
 from gvsig.libs.toolbox import ToolboxProcess, NUMERICAL_VALUE_DOUBLE,SHAPE_TYPE_POLYGON,NUMERICAL_VALUE_INTEGER,SHAPE_TYPE_POLYGON, SHAPE_TYPE_POINT
 from es.unex.sextante.gui import core
 from es.unex.sextante.gui.core import NameAndIcon
-
+from es.unex.sextante.additionalInfo import AdditionalInfoVectorLayer
 from es.unex.sextante.gui.core import SextanteGUI
 from org.gvsig.geoprocess.lib.api import GeoProcessLocator
 from addons.RingMap.ringCreation import createRingMap
@@ -41,6 +41,7 @@ class RingMapGeoprocess(ToolboxProcess):
     if os.path.exists(helpPath):
         return File(helpPath)
     return None
+    
   def defineCharacteristics(self):
       i18nManager = ToolsLocator.getI18nManager()
       self.setName(i18nManager.getTranslation("_Ring_map"))
@@ -48,7 +49,7 @@ class RingMapGeoprocess(ToolboxProcess):
       self.setUserCanDefineAnalysisExtent(False)
       params = self.getParameters()
       
-      params.addInputVectorLayer("LAYER",i18nManager.getTranslation("_Input_layer"), SHAPE_TYPE_POLYGON, True)
+      params.addInputVectorLayer("LAYER",i18nManager.getTranslation("_Input_layer"), AdditionalInfoVectorLayer.SHAPE_TYPE_ANY, True)
       params.addTableField("FLAYER", i18nManager.getTranslation("_Field_layer"), "LAYER", True)
       params.addInputTable("TABLE", i18nManager.getTranslation("_Input_Table"), True)
       params.addTableField("FTABLE", i18nManager.getTranslation("_Field_table"), "TABLE", True)

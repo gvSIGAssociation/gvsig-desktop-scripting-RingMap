@@ -25,49 +25,49 @@
 
 -->
 	<help>
-		<element name="DESCRIPTION" text="Geoproceso para la creacion de una grafica que ayuda a visualizar diferentes campos contenidos en una misma entidad y ser facil de comparar con las geometrias cercanas. Esta entidad puede ser de cualquier tipo: poligono, linea o punto. El proceso se ejecuta sobre toda o sobre la seleccion de una capa." description="Descripcion" type="0">
+		<element name="DESCRIPTION" text="Geoprocess for the creation of a graph that helps to visualize different fields contained in the same entity and be easy to compare with nearby geometries. This entity can be of any type: polygon, line or point. The process is executed on all or on the selection of a layer. There is needed an ID field." description="Description" type="0">
 		</element>
-                <image description="Parametros de la capa ejemplo" file="params.png">
+                <image description="Example for layer parameters" file="params.png">
 		</image>
-                <image description="Opciones de la capa ejemplo" file="options.png">
+                <image description="Example for options parameters" file="options.png">
 		</image>
-                <image description="Resultado" file="result1.png">
+                <image description="Result" file="result1.png">
 		</image>
-		<element name="ADDITIONAL_INFO" text="" description="Informacion adicional" type="0">
+		<element name="ADDITIONAL_INFO" text="" description="Additional info" type="0">
 		</element>
-		<element name="EXTENSION_AUTHOR" text="Oscar Martinez" description="Algoritmo creado por" type="0">
+		<element name="EXTENSION_AUTHOR" text="Oscar Martinez" description="Algorithm created by" type="0">
 		</element>
-		<element name="HELP_AUTHOR" text="Oscar Martinez" description="Ayuda creada por" type="0">
+		<element name="HELP_AUTHOR" text="Oscar Martinez" description="Help created by" type="0">
 		</element>
-		<element name="USER_NOTES" text="" description="Notas de usuario" type="0">
+		<element name="USER_NOTES" text="" description="User notes" type="0">
 		</element>
-		<element name="LAYER" text="Capa de entrada" description="" type="3">
+		<element name="LAYER" text="Layer with geometries" description="" type="3">
 		</element>
-		<element name="FLAYER" text="Campo unico de la capa de entrada" description="" type="3">
+		<element name="FLAYER" text="Unique ID field in layer" description="" type="3">
 		</element>
-		<element name="TABLE" text="Tabla de entrada con los campos a usas" description="" type="3">
+		<element name="TABLE" text="Table with data" description="" type="3">
 		</element>
-		<element name="FTABLE" text="Campo unico de la tabla de entrada" description="" type="3">
+		<element name="FTABLE" text="Unique ID field in data table" description="" type="3">
 		</element>
-		<element name="FIELDS" text="Campos a utilizar" description="" type="3">
+		<element name="FIELDS" text="Fields to use" description="" type="3">
 		</element>
-		<element name="DEFAULTSEGS" text="Numero de segementos que tendra la curva del poligono" description="" type="3">
+		<element name="DEFAULTSEGS" text="Number of segments in polygons" description="" type="3">
 		</element>
-		<element name="GAPS" text="Espacios en blanco entre sectores" description="" type="3">
+		<element name="GAPS" text="Gaps between sectors" description="" type="3">
 		</element>
-		<element name="HALFSTEP" text="Giro inicial de la grafica" description="" type="3">
+		<element name="HALFSTEP" text="Initial turn" description="" type="3">
 		</element>
-		<element name="INTERNALRADIUS" text="Radio del circulo interno que se queda vacio" description="" type="3">
+		<element name="INTERNALRADIUS" text="Radio of the inner circle that remains empty" description="" type="3">
 		</element>
-		<element name="RADIUSINTERVAL" text="Intervalo de radio entre los diferentes circulos" description="" type="3">
+		<element name="RADIUSINTERVAL" text="Radio interval between the different circles" description="" type="3">
 		</element>
-		<element name="CENTERTOPSECTOR" text="Centrar el sector superior para que el eje X lo corte por la mitad" description="" type="3">
+		<element name="CENTERTOPSECTOR" text="Center the upper sector so that the X axis cuts it in half" description="" type="3">
 		</element>
-		<element name="LABELIDSECTOR" text="Etiquetar la ID de cada elemento analizado" description="" type="3">
+		<element name="LABELIDSECTOR" text="Label the ID of each item analyzed" description="" type="3">
 		</element>
-		<element name="LABELONLYFIRSTSECTOR" text="Etiquetar solo los campos del el primer sector" description="" type="3">
+		<element name="LABELONLYFIRSTSECTOR" text="Label only the fields of the first sector" description="" type="3">
 		</element>
-		<element name="CREATESECTORLABEL" text="Crear etiqueta del sector" description="" type="3">
+		<element name="CREATESECTORLABEL" text="Create sector label" description="" type="3">
 		</element>
 	</help>
 <?xml version='1.0' encoding='ISO-8859-1' standalone='yes' ?>
