@@ -8,6 +8,9 @@ from org.gvsig.symbology.fmap.mapcontext.rendering.legend.impl import VectorialI
 from org.gvsig.symbology.fmap.mapcontext.rendering.legend.styling import LabelingFactory
 import pdb
 # math.radians(x)
+from org.gvsig.expressionevaluator import ExpressionEvaluatorLocator
+from org.gvsig.fmap.dal import DALLocator
+
 to_radian = lambda degree: math.pi / 180.0 * degree
 # math.degrees(x)
 to_degree = lambda radian: radian * (180.0 / math.pi)
@@ -205,9 +208,26 @@ def createRingMap(
 
     prering = create_ring_cell(centroid, from_deg, to_deg, rin, rout, default_segs).centroid()
     feature = getClosest(featureList, prering)
-
+    builder = store.createExpressionBuilder()
     for iring in xrange(0, len(fields)):
-      featureIdValues = table.findFirst(str(idTable)+"="+str(feature.get(idStore)))
+      #featureIdValues = table.findFirst(str(idTable)+"="+str(feature.get(idStore)))
+          # QUERY
+      
+      ## Eq expression
+      expFilter = builder.eq(
+            builder.column(idTable),
+            builder.constant(feature.get(idStore))
+            ).toString()
+      #exp = ExpressionEvaluatorLocator.getManager().createExpression()
+      #exp.setPhrase(expFilter)
+      #evaluator = DALLocator.getDataManager().createExpresion(exp)
+      #featureIdValues = table.findFirst(evaluator)
+      featureIdValues = table.findFirst(expFilter)
+
+      #fq1 = store.createFeatureQuery()
+      #fq1.setFilter(evaluator)
+      #fq1.retrievesAllAttributes()
+      
       new = ringStore.createNewFeature()
       rin = radius+(radius_interval*(iring+1))
       rout = radius+(radius_interval*iring)
